@@ -1,0 +1,20 @@
+
+1) Difference between var, let, and const  
+
+In JavaScript, var, let, and const are used for variable declaration. The var keyword is function-scoped, meaning it is accessible within the function where it is declared, and it gets hoisted with an initial value of undefined. This often leads to unexpected behavior and is generally avoided in modern JavaScript. On the other hand, let and const are block-scoped, which means they are only accessible within the block ({}) where they are defined. They are also hoisted but remain in a "temporal dead zone" until they are actually assigned a value, which prevents accidental access before initialization. The main difference between let and const is that variables declared with let can be reassigned, whereas variables declared with const cannot be reassigned once initialized. Therefore, let is used when the value may change, while const is used when the value should remain constant.
+
+2) Difference between map(), forEach(), and filter()  
+
+The methods map(), forEach(), and filter() are all used to work with arrays, but their purposes differ. The map() method is used when we want to transform each element of an array and create a new array with the transformed values. For example, squaring each number in an array using map() would give a new array of squares. The forEach() method, however, is used purely for iteration when we want to perform side effects such as logging values or updating external variables. Unlike map(), it does not return a new array, but simply executes the callback function on each element. Finally, the filter() method is used to select elements from an array based on a condition. It creates a new array containing only those elements that meet the given criteria, such as extracting all even numbers from an array. While map() and filter() return new arrays, forEach() returns undefined.
+
+3) Arrow Functions in ES6  
+
+Arrow functions, introduced in ES6, provide a more concise way of writing functions compared to traditional function expressions. They use the => syntax and can implicitly return a value if the function body contains only a single expression. For example, (a, b) => a + b is a shorter version of a regular function that returns the sum of two numbers. Another important feature of arrow functions is that they do not have their own this context. Instead, they inherit this from the enclosing scope, which makes them especially useful in situations like callbacks, where using a regular function might cause this to refer to the wrong context. Overall, arrow functions improve readability and help avoid common mistakes with this.
+
+4) Destructuring Assignment in ES6  
+
+Destructuring assignment is a feature in ES6 that allows us to extract values from arrays or objects and assign them to variables in a simple and readable way. For arrays, destructuring is based on the position of elements. For example, if we have const [a, b] = [10, 20], then a becomes 10 and b becomes 20. For objects, destructuring is based on property names. For instance, const {name, age} = {name: "Rahim", age: 25} assigns "Rahim" to name and 25 to age. We can also provide default values while destructuring, so if a property or array element does not exist, the default value will be used. This feature simplifies code and makes it easier to work with complex data structures.
+
+5) Template Literals in ES6  
+
+Template literals are a new way of working with strings introduced in ES6. They are enclosed in backticks (`) instead of single or double quotes and provide powerful features such as string interpolation and multi-line support. With template literals, we can insert variables directly into strings using the ${} syntax. For example, `Hello, my name is ${name} and I am ${age} years old.` is much cleaner and easier to read than using string concatenation with the + operator. Template literals also allow multi-line strings without the need for escape characters like \n, which makes code more readable.
